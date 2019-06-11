@@ -26,7 +26,7 @@ export default new Router({
         name: 'blog',
         component: blog,
       }, {
-        path: '',
+        path: 'shin',
         name: 'shin',
         component: shin,
       }, {
