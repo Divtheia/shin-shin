@@ -7,27 +7,27 @@
     leave-active-class="fadeOut"
     >
   <div class="container drink py-5 text-success">
-      <h1>飲料清單</h1>
+      <h1>飲料清單<h5 class="text-secondary d-inline px-3"><small>-- 請點選菜單價格</small></h5></h1>
       <form>
         <ul v-for="(order,index) in drinkOrder" :key='order' :index='index'>
           <li @click="deletOrder(index)" class="deletOrder">{{index+1}} - {{order.orderTitle}} {{order.orderSize}} {{order.orderPrice}}</li>
         </ul>
       </form>
-      <div class="orderTitle text-right">總共:{{priceSum}}元</div>
+      <div class="orderTitle text-right mr-5 pb-2">總共:{{priceSum}}元</div>
     <div>
-    <table>
+    <table class="green">
     <thead>
-      <th class="drinkType">種類</th>
-      <th class="drinkTitle">名稱</th>
-      <th class="drinkMprice">M size</th>
-      <th class="drinkLprice">L size</th>
+      <th class="drinkType green">種類</th>
+      <th class="drinkTitle green">名稱</th>
+      <th class="drinkMprice green">M size</th>
+      <th class="drinkLprice green">L size</th>
     </thead>
     <tbody>
-      <tr v-for='(drink,index) in drinks' :key='drink' :index='index'>
-        <td class="drinkType">{{drink.type}}</td>
-        <td class="drinkTitle">{{drink.title}}</td>
-        <td class="drinkMprice" @click="addMprice(index)">{{drink.mprice}}</td>
-        <td class="drinkLprice" @click="addLprice(index)">{{drink.lprice}}</td>
+      <tr v-for='(drink,index) in drinks' :key='drink' :index='index' class="green">
+        <td class="drinkType green">{{drink.type}}</td>
+        <td class="drinkTitle green">{{drink.title}}</td>
+        <td class="drinkMprice green" @click="addMprice(index)">{{drink.mprice}}</td>
+        <td class="drinkLprice green" @click="addLprice(index)">{{drink.lprice}}</td>
       </tr>
     </tbody>
     </table>
